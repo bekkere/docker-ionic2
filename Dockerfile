@@ -1,4 +1,4 @@
-# Ionic 2 developer container
+# Ionic 2 developer container (Ionic 2 rc2)
 # Use at your own risk! I have not tested any deployment, created my own as all the others did not work!
 # alias ionic="docker run -ti --rm -p 8100:8100 -p 35729:35729 -v \$PWD:/myApp:rw bekkere/ionic2-framework:latest ionic"
 # then use ionic serve on localhost:8100
