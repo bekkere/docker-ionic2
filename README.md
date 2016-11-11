@@ -17,7 +17,7 @@ docker pull bekkere/docker-ionic2
 Create a alias for simple execution: 
 
 ```console
-alias ionic="docker run -ti --rm -p 8100:8100 -p 35729:35729 -v \$PWD:/myApp:rw bekkere/ionic2-framework:latest ionic"
+alias ionic="docker run -ti --rm -p 8100:8100 -p 35729:35729 -v \$PWD:/myApp:rw bekkere/docker-ionic2:latest ionic"
 
 ```
 
