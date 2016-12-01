@@ -51,5 +51,5 @@ CMD bash -C '/start.sh';'bash'
 EXPOSE 8100 35729
 
 # Do NOT use VOLUME statement as it may result in orphaned volumes
-# docker run --rm ... bash
+# docker run --rm ... bash 
 # VOLUME /myApp
