@@ -1,4 +1,4 @@
 #!/bin/bash
-docker build -t bekkere/ionic2-docker:latest .
+docker build -t bekkere/docker-ionic2:latest .
 
-docker run -t -i bekkere/ionic2-docker:latest /bin/bash
+docker run -t -i bekkere/docker-ionic2:latest /bin/bash
