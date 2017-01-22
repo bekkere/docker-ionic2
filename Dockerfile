@@ -1,6 +1,6 @@
-# Ionic 2 developer container (Ionic 2 rc4)
+# Ionic 2 developer container
 # Use at your own risk! I have not tested any deployment, created my own as all the others did not work!
-# alias ionic="docker run -ti --rm -p 8100:8100 -p 35729:35729 -v \$PWD:/myApp:rw bekkere/ionic2-framework:latest ionic"
+# alias ionic="docker run -ti --rm -p 8100:8100 -p 35729:35729 -v \$PWD:/myApp:rw bekkere/ionic2-docker:latest ionic"
 # then use ionic serve on localhost:8100 
 
 FROM ubuntu:16.04
@@ -32,7 +32,7 @@ RUN npm install -g -y typescript
 RUN npm install -g -y gulp
 
 RUN echo ' Create a alias for quick launch ...' > /Readme.txt
-RUN echo ' alias ionic=docker run -ti --rm -p 8100:8100 -p 35729:35729 -v \$PWD:/myApp:rw bekkere/ionic2-framework:latest ionic' >> /Readme.txt
+RUN echo ' alias ionic=docker run -ti --rm -p 8100:8100 -p 35729:35729 -v \$PWD:/myApp:rw bekkere/ionic2-docker:latest ionic' >> /Readme.txt
 RUN echo ''
 RUN echo ' Installed the following packages:' >> /Readme.txt
 RUN echo ' --> Ubuntu 16.04, with curl' >> /Readme.txt
