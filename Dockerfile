@@ -1,7 +1,7 @@
 # Ionic 2 developer container
 # Use at your own risk! I have not tested any deployment, created my own as all the others did not work!
 # alias ionic="docker run -ti --rm -p 8100:8100 -p 35729:35729 -v \$PWD:/myApp:rw bekkere/docker-ionic2:latest ionic"
-# then use ionic serve on localhost:8100 
+# then use ionic serve on localhost:8100
 
 FROM ubuntu:16.04
 
@@ -52,5 +52,5 @@ CMD bash -C '/start.sh';'bash'
 EXPOSE 8100 35729
 
 # Do NOT use VOLUME statement as it may result in orphaned volumes
-# docker run --rm ... bash 
+# docker run --rm ... bash
 # VOLUME /myApp
