@@ -7,12 +7,20 @@ FROM ubuntu:16.04
 
 MAINTAINER bekkere <bekkere@gmail.com>
 
-LABEL Description="Ionic 2 Framework Dev container using /myApp volume, expose port 8100 and 35729, for your app directories"
+# Set one or more individual labels
+LABEL Description="Ionic 2 Framework Dev container"
+LABEL Volumes="/myApp"
+LABEL Ports="8100, 35729"
+LABEL Ionic_Framework_Version="2.0.0"
+LABEL Ionic_CLI_Version="2.2.1"
+LABEL Ionic_App_Lib_Version="2.2.0"
+LABEL Ionic_App_Script_Version="1.0.0"
+LABEL Node_Version="7.x"
+LABEL release-date="2017-01-29"
+LABEL is-production="False"
+LABEL HOST_ALIAS="alias ionic=docker run -ti --rm -p 8100:8100 -p 35729:35729 -v $PWD:/myApp:rw bekkere/docker-ionic2:latest ionic"
 
-RUN apt-get update
-
-RUN apt-get install -y -q \
-    curl
+RUN apt-get update && apt-get install -y -q curl
 
 # As of 03-jul-16: Ionic is not yet ready for Node.js 6, see https://github.com/driftyco/ionic-cli/issues/960
 # RUN curl -sL https://deb.nodesource.com/setup_6.x | bash -
@@ -51,6 +59,6 @@ CMD bash -C '/start.sh';'bash'
 
 EXPOSE 8100 35729
 
-# Do NOT use VOLUME statement as it may result in orphaned volumes
+# Do NOT use VOLUME statement as it may result in orphaned volumes ...
 # docker run --rm ... bash
 # VOLUME /myApp
