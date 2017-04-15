@@ -26,7 +26,7 @@ RUN apt-get update && apt-get install -y -q curl
 
 RUN curl -sL https://deb.nodesource.com/setup_7.x | bash -
 
-# install nodejs, npm and git
+# install nodejs, npm and git 
 RUN apt-get install -y -q \
             nodejs \
             git \
