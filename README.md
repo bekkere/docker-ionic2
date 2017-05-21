@@ -5,7 +5,7 @@
 By [bekkere]
 
 ## Description
-**Docker-Ionic2** Docker container for Ionic2 Framework
+**Docker-Ionic2** Development Docker container for Ionic Framework
 
 ## Installation
 
@@ -26,6 +26,6 @@ alias ionic="docker run -ti --rm -p 8100:8100 -p 35729:35729 -v \$PWD:/myApp:rw 
 Run the container using:
 
 ```console
-ionic start MyApp --v2
+ionic start MyApp
 ionic serve --lab -b # http://localhost:8100/ionic-lab
 ```

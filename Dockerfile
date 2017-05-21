@@ -8,17 +8,17 @@ FROM ubuntu:16.04
 MAINTAINER bekkere <bekkere@gmail.com>
 
 # Set one or more individual labels
-LABEL Description="Ionic 2 Framework Dev container"
+LABEL Description="Ionic Framework Dev container"
 LABEL Volumes="/myApp"
 LABEL Ports="8100, 35729"
-LABEL Ionic_Framework_Version="2.0.0"
+LABEL Ionic_Framework_Version="ionic-angular 3.2.1"
 LABEL Cordova_CLI_Version="6.5.0"
-LABEL Ionic_CLI_Version="2.2.1"
-LABEL Ionic_App_Lib_Version="2.2.0"
-LABEL Ionic_App_Script_Version="1.0.0"
+LABEL Ionic_CLI_Version="3.1.2"
+LABEL Ionic_Cli_Utils="1.1.2"
+LABEL Ionic_App_Script_Version="1.3.7"
 LABEL Node_Version="7.x"
-LABEL TypeScript_Version="2.2.1"
-LABEL release-date="2017-03-23"
+LABEL TypeScript_Version="2.x"
+LABEL release-date="2017-05-21"
 LABEL is-production="False"
 LABEL HOST_ALIAS="alias ionic=docker run -ti --rm -p 8100:8100 -p 35729:35729 -v $PWD:/myApp:rw bekkere/docker-ionic2:latest ionic"
 
